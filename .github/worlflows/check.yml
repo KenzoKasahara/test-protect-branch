@@ -1,0 +1,19 @@
+name: Status Check
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+
+jobs:
+  check1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: something test1
+        run: exit 0
+
+  check2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: something test2
+        run: exit 0
